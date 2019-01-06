@@ -17,10 +17,7 @@ Then log into it with
 
     vagrant ssh
 
-# Download the data
-To load the data, cd into the vagrant directory and use the command 
-
-    psql -d news -f newsdata.sql
+# Database Overview
 
 The database includes three tables:
 
