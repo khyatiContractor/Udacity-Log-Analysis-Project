@@ -24,7 +24,7 @@ def execute_query(query):
     return votes
 
 
-def print_query_results(query_result, que):
+def print_query12_results(query_result, que):
     print (que)
     for result in query_result['output']:
         print ('\t' + str(result[0]) + ' -- ' + str(result[1]) + ' views')
@@ -37,10 +37,10 @@ def print_query3_results(query_result, que):
 
 
 query1_result['output'] = execute_query(QUERY1)
-print_query_results(query1_result, QUE1)
+print_query12_results(query1_result, QUE1)
 
 query2_result['output'] = execute_query(QUERY2)
-print_query_results(query2_result, QUE2)
+print_query12_results(query2_result, QUE2)
 
 query3_result['output'] = execute_query(QUERY3)
 print_query3_results(query3_result, QUE3)
