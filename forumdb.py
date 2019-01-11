@@ -86,6 +86,7 @@ def print_query3_results(query_result, que):
         print ('\t' + str(result[0]) + ' -- ' + str(result[1]) + ' %  errors')
 
 
+<<<<<<< HEAD
 if __name__ == '__main__':
     query1_result['output'] = execute_query(QUERY1)
     print_query12_results(query1_result, QUE1)
@@ -95,6 +96,5 @@ if __name__ == '__main__':
 
     query3_result['output'] = execute_query(QUERY3)
     print_query3_results(query3_result, QUE3)
-
 else:
     print ('Importing ...')
