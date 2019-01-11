@@ -67,7 +67,7 @@ def connect(database_name):
     """
 
 def execute_query(query):
-    db, C = connect(database_name=DBNAME)
+    db, c = connect(database_name=DBNAME)
     c.execute(query)
     votes = c.fetchall()
     db.close()
