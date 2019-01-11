@@ -23,7 +23,8 @@ QUERY2 = """
 SELECT authors.name AS name,
        count(*) AS numb
 FROM log,
-     articles
+     articles,
+     authors
 WHERE articles.slug = substr(log.path, 10)
 GROUP BY atitle
 ORDER BY numb DESC
@@ -66,8 +67,7 @@ def connect(database_name):
     """
 
 def execute_query(query):
-    db = connect(database_name=DBNAME)
-    c = db.cursor()
+    db, C = connect(database_name=DBNAME)
     c.execute(query)
     votes = c.fetchall()
     db.close()
@@ -86,7 +86,6 @@ def print_query3_results(query_result, que):
         print ('\t' + str(result[0]) + ' -- ' + str(result[1]) + ' %  errors')
 
 
-<<<<<<< HEAD
 if __name__ == '__main__':
     query1_result['output'] = execute_query(QUERY1)
     print_query12_results(query1_result, QUE1)
