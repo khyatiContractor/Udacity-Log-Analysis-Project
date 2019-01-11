@@ -1,7 +1,7 @@
 # Log Analysis:
 This project is part of Udacity FullStack Nano-Degree Program. 
 
-# Report generation
+## Report generation
 In this project News database is used. Database can be accessed from [here](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip)
 Here SQL queries are written to analyze logs of news database. Those queries are as per below:
 
@@ -21,7 +21,7 @@ Here SQL queries are written to analyze logs of news database. Those queries are
     Output:
     July 29, 2016 — 2.5% errors
 
-# Database Overview
+## Database Overview
 
 The database includes three tables:
 
@@ -31,7 +31,7 @@ The database includes three tables:
 
         The log table -- includes one entry for each time a user has accessed the site.
  
- # Create View:
+ ## Create View:
     psql news
 
     create view articalOrder as 
@@ -52,7 +52,7 @@ The database includes three tables:
     from log group by date 
     order by reqcount desc;
 
-# The virtual machine
+## The virtual machine
 If you need to bring the virtual machine back online:
 
     vagrant up
