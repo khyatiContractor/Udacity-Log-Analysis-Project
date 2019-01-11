@@ -16,7 +16,7 @@ FROM log,
 WHERE articles.slug = substr(log.path, 10)
 GROUP BY atitle
 ORDER BY numb DESC
-LIMIT 3; 
+LIMIT 3;
 """
 
 QUERY2 = """
@@ -28,7 +28,7 @@ FROM log,
 WHERE articles.slug = substr(log.path, 10)
 GROUP BY atitle
 ORDER BY numb DESC
-LIMIT 3; 
+LIMIT 3;
 """
 
 QUERY3 = """
@@ -36,7 +36,7 @@ SELECT reqData.date,
        (errorcount*100.0/reqcount) AS errorPercent
 FROM errorData,
      errorData
-WHERE reqcount * 0.01 < errorcount 
+WHERE reqcount * 0.01 < errorcount
 AND reqData.date = errorData.date
 ORDER BY errorPercent DESC;
 """
@@ -45,9 +45,10 @@ query1_result = dict()
 query2_result = dict()
 query3_result = dict()
 
+
 def connect(database_name):
     """
-     Connect to the PostgreSQL database. 
+     Connect to the PostgreSQL database.
      Return a database connection.
     """
     try:
@@ -61,10 +62,11 @@ def connect(database_name):
     cursor = db.cursor()
     return db, cursor
     """
-                db, cursor : is a tuple. 
+                db, cursor : is a tuple.
                 The first element (db) is a connection to the database.
                 The second element (cursor) is a cursor for the database.
     """
+
 
 def execute_query(query):
     db, C = connect(database_name=DBNAME)
